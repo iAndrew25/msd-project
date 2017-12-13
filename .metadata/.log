@@ -1,0 +1,144 @@
+!SESSION 2017-11-16 16:42:16.005 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-16 16:45:19.994
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-11-16 16:48:05.324 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-16 16:48:29.959
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2017-11-16 16:51:45.755 -----------------------------------------------
+eclipse.buildId=4.7.1.M20171009-0410
+java.version=1.8.0_151
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:49.576
+!MESSAGE Removing part descriptor with the 'org.eclipse.mylyn.builds.navigator.builds' id and the 'Builds' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-11-16 16:52:51.672
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Andy'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.106
+!MESSAGE Removing part descriptor with the 'org.eclipse.recommenders.snipmatch.rcp.views.snippets' id and the 'Snippets' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.191
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.infra.core.pluginexplorer.PluginsContentView' id and the 'Plugin Content Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.232
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.infra.viewpoints.policy.ViewpointExplorer' id and the 'Viewpoint Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.422
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.ui.toolbox.notification.view.PapyrusNotificationView' id and the 'Papyrus Notification' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.711
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.uml.oclconstraintevaluation.OCLEvaluationView' id and the 'OCL evaluation View' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.736
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.views.documentation.DocumentationView' id and the 'Documentation' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.758
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.views.modelexplorer.modelexplorer' id and the 'Model Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.793
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.customization.properties.preview' id and the 'Customization Preview' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.858
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.views.references.ReferencesView' id and the 'References' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.961
+!MESSAGE Removing part descriptor with the 'org.eclipse.papyrus.views.validation.ModelValidationView' id and the 'Model Validation' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:52.991
+!MESSAGE Removing part descriptor with the 'org.eclipse.graphiti.ui.internal.editor.thumbnailview' id and the 'Miniature View' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.132
+!MESSAGE Removing part descriptor with the 'org.eclipse.linuxtools.docker.ui.dockerContainersView' id and the 'Docker Containers' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.160
+!MESSAGE Removing part descriptor with the 'org.eclipse.linuxtools.docker.ui.dockerImagesView' id and the 'Docker Images' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.175
+!MESSAGE Removing part descriptor with the 'org.eclipse.linuxtools.docker.ui.dockerExplorerView' id and the 'Docker Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.191
+!MESSAGE Removing part descriptor with the 'org.eclipse.linuxtools.docker.ui.dockerImageHierarchyView' id and the 'Docker Image Hierarchy' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.202
+!MESSAGE Removing part descriptor with the 'org.eclipse.rse.terminals.ui.view.TerminalView' id and the 'Terminals' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.228
+!MESSAGE Removing part descriptor with the 'org.fusesource.ide.jmx.views.MessageView' id and the 'Messages View' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.243
+!MESSAGE Removing part descriptor with the 'org.fusesource.ide.jmx.views.DiagramView' id and the 'Diagram View' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.255
+!MESSAGE Removing part descriptor with the 'org.hibernate.eclipse.console.views.KnownConfigurationsView' id and the 'Hibernate Configurations' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.269
+!MESSAGE Removing part descriptor with the 'org.hibernate.eclipse.console.views.QueryPageTabView' id and the 'Hibernate Query Result' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.286
+!MESSAGE Removing part descriptor with the 'org.hibernate.eclipse.console.views.DynamicSQLPreviewView' id and the 'Hibernate Dynamic SQL Preview' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.305
+!MESSAGE Removing part descriptor with the 'org.hibernate.eclipse.console.views.QueryParametersView' id and the 'Query Parameters' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.319
+!MESSAGE Removing part descriptor with the 'org.jboss.ide.eclipse.archives.ui.ProjectArchivesView' id and the 'Project Archives' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.336
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.forge.ui.console' id and the 'Forge Console' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.349
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.jmx.jvmmonitor.ui.JvmExplorer' id and the 'JVM Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.362
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.jmx.ui.internal.views.navigator.MBeanExplorer' id and the 'JMX Navigator' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.373
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.jst.web.ui.navigator.WebProjectsView' id and the 'Web Projects' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.385
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.jst.css.view.editor' id and the 'CSS Properties' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.398
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.jst.css.view.preview' id and the 'CSS Preview' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.412
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.openshift.express.ui.explorer.expressConsoleView' id and the 'OpenShift Explorer' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.423
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.vpe.preview.view.VpvView' id and the 'HTML Preview' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.435
+!MESSAGE Removing part descriptor with the 'org.jboss.tools.ws.ui.tester.views.TestWSView' id and the 'Web Service Tester' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2017-11-16 16:52:53.446
+!MESSAGE Removing part descriptor with the 'tern.eclipse.ide.ui.views.TernOutlineView' id and the 'Tern Outline' description. Points to the invalid 'bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView' class.
