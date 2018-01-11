@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 import javax.ws.rs.core.Response;
 
 import org.app.patterns.EntityRepository;
-import org.app.service.ejb.DataService;
+import org.app.service.ejb.TestService;
 import org.app.service.entities.EntityBase;
 import org.app.service.rest.ApplicationConfig;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -44,7 +44,7 @@ public class TestDataServiceRestArq {
 	        return ShrinkWrap
 	                .create(WebArchive.class, "msd-test.war")
 	                .addPackage(EntityRepository.class.getPackage())
-	                .addPackage(DataService.class.getPackage())
+	                .addPackage(TestService.class.getPackage())
 	                .addPackage(EntityBase.class.getPackage())
 	                .addPackage(ApplicationConfig.class.getPackage())
 	                .addAsResource("META-INF/persistence.xml")

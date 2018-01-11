@@ -1,4 +1,4 @@
-package org.app.service.ejb.test;
+package org.app.service.ejb.exam;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,8 +8,6 @@ import java.util.logging.Logger;
 import javax.ejb.EJB;
 
 import org.app.patterns.EntityRepository;
-import org.app.service.ejb.ExamService;
-import org.app.service.ejb.ExamServiceEJB;
 import org.app.service.ejb.TestService;
 import org.app.service.ejb.TestServiceEJB;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -28,12 +26,12 @@ import static org.junit.Assert.*;
 
 @RunWith(Arquillian.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class TestDataServiceEJBArq {
-	private static Logger logger = Logger.getLogger(TestDataServiceEJBArq.class.getName());
+public class ExamDataServiceEJBArq {
+	private static Logger logger = Logger.getLogger(ExamDataServiceEJBArq.class.getName());
 	
 	// Arquilian infrastructure
 	@EJB
-	private static ExamService service;
+	private static TestService service;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -43,9 +41,9 @@ public class TestDataServiceEJBArq {
 	public static Archive<?> createDeployment() {
 	        return ShrinkWrap
 	                .create(WebArchive.class, "MSD-Project.war")
-	                .addPackage(Exam.class.getPackage())
-	                .addPackage(ExamService.class.getPackage())
-	                .addPackage(ExamServiceEJB.class.getPackage())
+	                .addPackage(Test.class.getPackage())
+	                .addPackage(TestService.class.getPackage())
+	                .addPackage(TestServiceEJB.class.getPackage())
 	                .addAsResource("META-INF/persistence.xml")
 	                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
 	   }
@@ -59,35 +57,34 @@ public class TestDataServiceEJBArq {
 	}
 	
 	@Test
-	public void test1_getExams() {
-		Collection<Exam> tests = service.getExams();
+	public void test1_getTests() {
+		Collection<org.app.service.entities.Test> tests = service.getTests();
 		assertTrue("Manage to read tests", tests.size() > 0);
 		logger.info("DEBUG: EJB Response ..." + tests);
 	}
 
 	@Test
-	public void test2_deleteExams() {
-		Collection<Exam> exams = service.getExams();
+	public void test2_deleteTests() {
+		Collection<org.app.service.entities.Test> tests = service.getTests();
 		
-		for(Exam e: exams) {
-			service.removeExam(e);
+		for(org.app.service.entities.Test t: tests) {
+			service.RemoveTest(t);
 		}
-		Collection<Exam> examsAfterDelete = service.getExams();
-		assertTrue("Manage to read tests", examsAfterDelete.size() > 0);
-		logger.info("DEBUG: EJB Response ..." + examsAfterDelete);
+		Collection<org.app.service.entities.Test> testsAfterDelete = service.getTests();
+		assertTrue("Manage to read tests", tests.size() > 0);
+		logger.info("DEBUG: EJB Response ..." + tests);
 	}	
 	
 	@Test
-	public void test3_addExams() {
-		int examsToAdd = 3;
-
-		for(int i = 1; i <= examsToAdd; i++) {
-			service.addExam(new Exam(i, "Exam " + 1, "Math", "1st of Nov"));
+	public void test3_addTests() {
+		int testsToAdd = 3;
+		List<Questions> questions =  new ArrayList<>();
+		for(int i = 1; i <= testsToAdd; i++) {
 			//Test t = new Test(0, "Test");
 			//service.AddTest(new org.app.service.entities.Test(i, "Test_" + 1));
 		}
-		Collection<Exam> exams = service.getExams();
-		assertTrue("Manage to add tests", exams.size() == 3);
+		Collection<org.app.service.entities.Test> tests = service.getTests();
+		assertTrue("Manage to add tests", tests.size() == 3);
 	}	
 
 }
