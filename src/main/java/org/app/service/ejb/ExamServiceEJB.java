@@ -9,26 +9,30 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Consumes;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import org.app.patterns.EntityRepository;
-import org.app.patterns.EntityRepositoryBase;
-import org.app.service.entities.EntityBase;
-import org.app.service.entities.Exam;
-import org.app.service.entities.Test;
+import org.app.patterns.*;
+import org.app.service.entities.*;
 
 /**
  * Session Bean implementation class ScrumTeamRepositoryService
  * Aggregate Repository Service Facade: Project - features - releases
  */
-@Path("/service") // http://localhost:8080/SAM1/rest/service
-// 1. Remote interface
+@Path("/exams")
 @Stateless
 @LocalBean
-public class ExamServiceEJB implements ExamService{
+public class ExamServiceEJB 
+				extends EntityRepositoryBase<Exam>
+				implements ExamService{
 	private static Logger logger = Logger.getLogger(TestServiceEJB.class.getName());
 	
 	// 2. Inject resource 
@@ -45,33 +49,62 @@ public class ExamServiceEJB implements ExamService{
     public String sayRest() {
     	return "Test Services is On";
     }
-
-	@Override
-	public Exam addExam(Exam exam) {
+    //CREATE
+    @POST
+	@Consumes({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
+	@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
+	public Exam addExam(Exam exam){
 		em.persist(exam);
 		em.flush();
-		em.refresh(exam);
 		return exam;
 	}
-	@Override
-	public String removeExam(Exam exam) {
-		exam = em.merge(exam);
-		em.remove(exam);
+    
+    //UPDATE
+    @PUT
+	@Consumes({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
+	@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
+	public Exam updateExam(Exam exam){
+		em.merge(exam);
 		em.flush();
-		return "True";
+		return exam;
 	}
 	
-	@Override
-	public Exam getExamById(int id) {
-		return em.createQuery("SELECT t FROM Test WHERE t.TestId = :testID", Exam.class)
-				.setParameter("testID", id)
-				.getSingleResult();
-	}
-	
-	@Override
-	public Collection<Exam> getExams() {
-		List<Exam> exams =  em.createQuery("SELECT t FROM Test", Exam.class).getResultList();
-		return exams;
-	}	
+	//Remove
+	@DELETE @Path("/{id}")
+	@Consumes({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
+	public String removeExam(@PathParam("id") String id){
+		String msg="";
+		Integer removeId = Integer.valueOf(id);
+		try {
+		Exam exam=em.find(Exam.class, removeId);
+			em.remove(exam);
+			em.flush();
+			msg="Exam removed.";
+		}
+		catch(Exception e){
+			msg="No exam with the given id has been found. " + "   Error given:   "+e;
+		}
 
+		return msg;
+	}
+	
+	//Read
+		@Path("/{id}")
+		@Produces({MediaType.APPLICATION_XML,MediaType.APPLICATION_JSON})
+		public Exam getExamById(@PathParam("id") String id){
+			Exam e = em.createQuery("SELECT e FROM Exam e WHERE e.id = :examID", Exam.class)
+					.setParameter("examID", id)
+					.getSingleResult();
+			return e;
+		}
+		
+		@GET
+		@Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+		public Collection<Exam> getExams(){
+			List<Exam> exams = em.createQuery("SELECT e FROM Exam e", Exam.class).getResultList();
+			return exams;
+		}
+
+		
+	
 }

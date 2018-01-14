@@ -12,14 +12,19 @@ import org.app.service.entities.Test;
 public interface ExamService {
 
 	//CREATE
-	Exam addExam(Exam exam);
+	//Exam addExam(Exam exam);
 	
 	//DELETE
-	String removeExam(Exam exam);
+	String removeExam(String id);
+	//String removeExam(Exam exam);
 	
 	//READ
-	Exam getExamById(int id);
+	Exam getExamById(String id);
 	Collection<Exam> getExams();
 
 	String sayRest();
+
+	Exam updateExam(Exam exam);
+
+	Exam addExam(Exam exam);
 }

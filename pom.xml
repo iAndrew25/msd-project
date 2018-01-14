@@ -144,6 +144,7 @@
 				<groupId>org.wildfly.plugins</groupId>
 				<artifactId>wildfly-maven-plugin</artifactId>
 				<version>${version.wildfly.maven.plugin}</version>
+				
 			</plugin>
 			<!-- Skipping tests -->
 			<plugin>

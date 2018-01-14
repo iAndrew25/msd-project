@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import javax.ejb.EJB;
 
 import org.app.patterns.EntityRepository;
+import org.app.service.ejb.ExamService;
 import org.app.service.ejb.TestService;
 import org.app.service.ejb.TestServiceEJB;
 import org.jboss.arquillian.container.test.api.Deployment;
@@ -31,7 +32,7 @@ public class ExamDataServiceEJBArq {
 	
 	// Arquilian infrastructure
 	@EJB
-	private static TestService service;
+	private static ExamService service;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
@@ -57,34 +58,36 @@ public class ExamDataServiceEJBArq {
 	}
 	
 	@Test
-	public void test1_getTests() {
-		Collection<org.app.service.entities.Test> tests = service.getTests();
-		assertTrue("Manage to read tests", tests.size() > 0);
-		logger.info("DEBUG: EJB Response ..." + tests);
+	public void exam1_getExams() {
+		Collection<Exam> exams = service.getExams();
+		assertTrue("Manage to read exams", exams.size() > 0);
+		logger.info("DEBUG: EJB Response ..." + exams);
 	}
 
 	@Test
-	public void test2_deleteTests() {
-		Collection<org.app.service.entities.Test> tests = service.getTests();
-		
-		for(org.app.service.entities.Test t: tests) {
-			service.RemoveTest(t);
+	public void test2_deleteExams() {
+		Collection<Exam> exams = service.getExams();
+		int countExams = exams.size();
+		for(Exam e:exams) {
+			//service.removeExam(e);
 		}
-		Collection<org.app.service.entities.Test> testsAfterDelete = service.getTests();
-		assertTrue("Manage to read tests", tests.size() > 0);
-		logger.info("DEBUG: EJB Response ..." + tests);
+		Collection<Exam> examsAfterDelete = service.getExams();
+		assertTrue("Exam was deleted", examsAfterDelete.size() == countExams - 1);
 	}	
 	
 	@Test
 	public void test3_addTests() {
-		int testsToAdd = 3;
+		int examsToAdd = 3;
 		List<Questions> questions =  new ArrayList<>();
-		for(int i = 1; i <= testsToAdd; i++) {
-			//Test t = new Test(0, "Test");
-			//service.AddTest(new org.app.service.entities.Test(i, "Test_" + 1));
+		Collection<Exam> exams = service.getExams();
+		int countExams = exams.size();
+		for(int i = 1; i <= examsToAdd; i++) {
+			String examName = "Exam" + i;
+			Exam e = new Exam(0, examName, "Examen", "20-10-2018");
+			//service.addExam(e);
 		}
-		Collection<org.app.service.entities.Test> tests = service.getTests();
-		assertTrue("Manage to add tests", tests.size() == 3);
+		Collection<Exam> examsAfterAdd = service.getExams();
+		assertTrue("Manage to add exams", examsAfterAdd.size() == countExams + 3);
 	}	
 
 }

@@ -70,7 +70,7 @@ public class TestDataServiceEJBArq {
 		Collection<Exam> exams = service.getExams();
 		
 		for(Exam e: exams) {
-			service.removeExam(e);
+		//	service.removeExam(e);
 		}
 		Collection<Exam> examsAfterDelete = service.getExams();
 		assertTrue("Manage to read tests", examsAfterDelete.size() > 0);
@@ -82,7 +82,7 @@ public class TestDataServiceEJBArq {
 		int examsToAdd = 3;
 
 		for(int i = 1; i <= examsToAdd; i++) {
-			service.addExam(new Exam(i, "Exam " + 1, "Math", "1st of Nov"));
+		//	service.addExam(new Exam(i, "Exam " + 1, "Math", "1st of Nov"));
 			//Test t = new Test(0, "Test");
 			//service.AddTest(new org.app.service.entities.Test(i, "Test_" + 1));
 		}
